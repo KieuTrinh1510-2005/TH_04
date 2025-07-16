@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lấy phần cuối tên</title>
+</head>
+
+<body>
+    <input id="name" placeholder="Nhập họ tên" type="text">
+    <button id="but">Xác nhận</button> <br>
+    <span id="check"></span>
+
+    <script>
+        var inputname = document.getElementById('name');
+        var check = document.getElementById('check');
+        var but = document.getElementById('but');
+
+        function callcheck() {
+            var fullName = inputname.value.trim();
+            var nameParts = fullName.split(' ');
+            var lastName = nameParts[nameParts.length - 1];
+
+            check.innerText = "Hello " + lastName;
+        }
+
+        but.onclick = callcheck;
+    </script>
+</body>
+
+</html>
