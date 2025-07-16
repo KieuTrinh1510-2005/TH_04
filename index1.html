@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="name" type="text" placeholder="In put your name">
+    <button id="btnCheck">Check</button>
+    <script>
+        var nameinput = document.getElementById("name");
+        var Checkbutton = document.getElementById("btnCheck")
+
+        function calltoHello() {
+            console.log("Hello " + nameinput.value);
+        }
+        Checkbutton.onclick = calltoHello;
+    </script>
+
+</body>
+
+</html>
